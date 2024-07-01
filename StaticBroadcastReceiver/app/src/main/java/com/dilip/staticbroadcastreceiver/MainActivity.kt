@@ -1,7 +1,5 @@
 package com.dilip.staticbroadcastreceiver
 
-import android.content.Intent
-import android.content.IntentFilter
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 
@@ -12,11 +10,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-/*
-        // Register receiver dynamically
-        val filter = IntentFilter(Intent.ACTION_BOOT_COMPLETED)
-        registerReceiver(ExampleBroadcast(), filter)
-*/
+        /*
+                // Register receiver dynamically
+                val filter = IntentFilter(Intent.ACTION_BOOT_COMPLETED)
+                registerReceiver(ExampleBroadcast(), filter)
+        */
 
     }
 }
