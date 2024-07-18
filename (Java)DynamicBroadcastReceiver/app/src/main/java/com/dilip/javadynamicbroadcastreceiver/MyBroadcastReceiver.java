@@ -24,6 +24,5 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
             Toast.makeText(context, "Time incremented", Toast.LENGTH_SHORT).show();
         }
 
-
     }
 }
