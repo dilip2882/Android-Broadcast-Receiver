@@ -22,7 +22,12 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name="com.dilip.javaexplicitbroadcastreceiver.MyDemoReceiver" android:exported="true" >
+        <receiver
+            android:name=".MyDemoReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.dilip.javaexplicitbroadcastsender.ACTION_SEND" />
+            </intent-filter>
         </receiver>
     </application>
 
