@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">(Java)OrderedBroadcastSender</string>
+    <string name="send_broadcast">SEND BROADCAST</string>
+    <string name="ready_to_code">Ready to Code</string>
+</resources>
