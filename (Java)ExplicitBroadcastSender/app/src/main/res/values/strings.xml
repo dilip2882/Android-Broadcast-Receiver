@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">(Java)ExplicitBroadcastSender</string>
+    <string name="send_broadcast">EXPLICIT BROADCAST</string>
+    <string name="ready_to_code">Ready to Code</string>
+</resources>
