@@ -6,6 +6,7 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity() {
             when (intent?.action) {
                 "com.dilip.mybroadcastsender.ACTION_SEND" -> {
                     val string = intent.getStringExtra("com.dilip.mybroadcastsender.EXTRA_DATA")
+                    Log.d("DILIP", "onReceive: $string")
                     Toast.makeText(context, "Receiver app receive ${string}", Toast.LENGTH_LONG)
                         .show()
                     increment++
@@ -32,9 +34,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val filter = IntentFilter("com.dilip.mybroadcastsender.ACTION_SEND")
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            registerReceiver(broad, filter, RECEIVER_EXPORTED)
+        val filter = IntentFilter("com.dilip.mybroadcastsender.ACTION_SEND").also {
+            registerReceiver(broad, it)
         }
     }
 
